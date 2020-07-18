@@ -1,8 +1,7 @@
 import React from 'react'
 import { useSvgDrawing } from 'react-hooks-svgdrawing'
-import { View } from 'react-native'
 
-import { Container, Pallet } from './styles'
+import { Container, Pallet, Canvas } from './styles'
 
 const Drawing: React.FC = () => {
   const [renderRef, action] = useSvgDrawing({
@@ -13,9 +12,10 @@ const Drawing: React.FC = () => {
   return (
     <>
       <Container>
-        <Pallet onClick={() => { action.changePenColor('blue') }}/>
+        <Pallet
+          onClick={() => { action.changePenColor('blue') }}/>
       </Container>
-      <div ref={renderRef}/>
+      <Canvas ref={renderRef}/>
     </>
   )
 }
