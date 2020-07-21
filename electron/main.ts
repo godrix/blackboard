@@ -10,6 +10,7 @@ function createWindow () {
     // width: 1100,
     // height: 700,
     transparent: true,
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
     }
