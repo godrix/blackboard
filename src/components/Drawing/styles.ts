@@ -27,6 +27,17 @@ export const BottomContainer = styled.div`
   justify-content:space-between;
   background:transparent;
 
+  .tools svg{
+    margin:5px;
+  }
+
+  @media (max-width: 600px) 
+{
+  .tools{
+    display:none;
+   }
+}
+
   /* opacity:0.1;
   transition: opacity 1s;
   :hover{

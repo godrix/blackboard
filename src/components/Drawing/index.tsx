@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSvgDrawing } from 'react-hooks-svgdrawing'
-import { FaUndo } from 'react-icons/fa'
+import { FaUndo, FaTrash, FaDownload } from 'react-icons/fa'
 
 import { Body, BottomContainer, Canvas, Pallet } from './styles'
 
@@ -24,8 +24,10 @@ const Drawing: React.FC = () => {
           <Pallet color="#E73C61" onClick={() => { action.changePenColor('#E73C61') }}/>
           <Pallet color="#FFFFFF" onClick={() => { action.changePenColor('#FFFFFF') }}/>
         </div>
-        <div>
+        <div className="tools">
           <FaUndo size={40} onClick={() => { action.undo() }} />
+          <FaDownload size={40} onClick={() => { action.download('png') }} />
+          <FaTrash size={40} onClick={() => { action.clear() }} />
         </div>
       </BottomContainer>
     </Body>
