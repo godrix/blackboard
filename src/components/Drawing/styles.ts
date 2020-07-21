@@ -21,9 +21,10 @@ export const TopContainer = styled.div`
   background:red;
 `
 export const BottomContainer = styled.div`
-  
-  width:500px;
+  display:flex;
+  width:100%;
   height:50px;
+  justify-content:space-between;
   background:transparent;
 
   /* opacity:0.1;
@@ -46,4 +47,8 @@ export const Pallet = styled.button<PalletProps>`
   border:0;
   outline:none;
   cursor:pointer;
+  :hover{
+    transform:scale(1.5);
+    transition: 0.5s;
+  } 
 `
