@@ -1,22 +1,26 @@
 import React from 'react'
 import { useSvgDrawing } from 'react-hooks-svgdrawing'
 
-import { Container, Pallet, Canvas } from './styles'
+import { Body, BottomContainer, Pallet, Canvas } from './styles'
 
 const Drawing: React.FC = () => {
   const [renderRef, action] = useSvgDrawing({
     penWidth: 10, // pen width
-    penColor: '#e00' // pen color
+    penColor: '#000' // pen color
   })
 
   return (
-    <>
-      <Container>
-        <Pallet
-          onClick={() => { action.changePenColor('blue') }}/>
-      </Container>
+    <Body>
       <Canvas ref={renderRef}/>
-    </>
+      <BottomContainer>
+        <Pallet color="#9B59B6"/>
+        <Pallet color="#3498DB"/>
+        <Pallet color="#2FCC71"/>
+        <Pallet color="#F1C423"/>
+        <Pallet color="#E67E22"/>
+        <Pallet color="#E73C61"/>
+      </BottomContainer>
+    </Body>
   )
 }
 
