@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Meme Maker" title="#blackboard" src=".github/banner.gif" width="90%" />
+    <img alt="Blackboard" title="#blackboard" src=".github/banner.gif" width="90%" />
 </h1>
 
 <h4 align="center">
